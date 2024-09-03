@@ -31,7 +31,7 @@ const item ={...cartItem,quantity:newQty}
 if(newQty<1) return;
 addItemToCart(item)
 }
-const amountWithoutTax=cart?.cartItems?.reduce((acc:CartItem,item:CartItem)=>acc + item.quantity*item.price,0).toFixed(2) 
+const amountWithoutTax=cart?.cartItems?.reduce((acc,item)=>acc + Number(item.quantity) * Number(item.price),0).toFixed(2) 
 // acc + item.quantity*item.price red color underline due the typeScript
 const amountWithTax=()=>{
   const tax=0.13*amountWithoutTax
@@ -103,8 +103,7 @@ const amountWithTax=()=>{
                   </div>
                   <div>
                     <div className="leading-5">
-                      <p className="font-semibold not-italic">${cartItem.price * cartItem.quantity}</p> 
-                      {/* can't able to use cartItem.quantity.toFixed(2) */}
+                      <p className="font-semibold not-italic">${(cartItem.price *cartItem.quantity).toFixed(2)}</p> 
                       <small className="text-gray-400">
                         ${cartItem.price}
                          /per item{" "}
