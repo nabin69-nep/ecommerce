@@ -3,7 +3,6 @@ import useSWR from "swr";
 import Product from "./ProductInterFace";
 import Link from "next/link";
 import { BsCart4 } from "react-icons/bs";
-
 const fetcher=(...args:[RequestInfo, RequestInit?]) =>fetch(...args).then(res=>res.json())
 
 export default  function Home() {
@@ -13,15 +12,12 @@ export default  function Home() {
     return <h1 className="flex items-center justify-center mt-52 text-5xl">Error occur !</h1>
   }
     
-    const titleNumber=25;
-   
-
-      
+    const titleNumber=20;
   return (
-    <div className="grid container mx-auto px-3  grid-cols-[repeat(auto-fit,minmax(300px,11fr))] justify-center gap-x-2 gap-y-4 mt-12 items-center">
+    <div className="grid container mx-auto px-3   grid-cols-[repeat(auto-fit,minmax(300px,11fr))] justify-center gap-x-2 gap-y-4 mt-12 items-center">
     {
       Products?Products.map((item)=>{
-        return<div className="mx-auto sm:mx-0 max-w-xs md:max-w-sm  lg:max-w-md xl:max-w-lg bg-white border border-gray-200 rounded-lg h-[450px] shadow-lg overflow-hidden">  
+        return<div className="mx-auto p-2 sm:mx-0 max-w-xs md:max-w-sm  lg:max-w-md xl:max-w-lg bg-white border border-gray-200 rounded-lg h-[450px] shadow-lg overflow-hidden">  
           <Link  href={`/details/${item.id}`}>
            <img src={item.image} alt="Product Image" className="w-full h-48 object-contain"/>
            <div className="p-4">
@@ -45,7 +41,7 @@ export default  function Home() {
     </div>  </Link>
     </div>
                      })
-      :<p className="font-bold mt-20 text-3xl ">Loading Items.....</p>
+      :<p className="font-bold  text-3xl flex justify-center items-center h-96">Loading Items.....</p>
       }
 </div>      
   );

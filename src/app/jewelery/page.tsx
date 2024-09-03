@@ -5,7 +5,7 @@ import Link from "next/link";
 import { BsCart4 } from "react-icons/bs";
 const fetcher=(...args:[RequestInfo, RequestInit?]) =>fetch(...args).then(res=>res.json())
 
-export default  function ElectronicProducts() {
+export default  function JeweleryPage() {
   const {data,error} =useSWR('https://fakestoreapi.com/products',fetcher)
   const Products:Product[]= data;
   if(error){
@@ -17,7 +17,7 @@ export default  function ElectronicProducts() {
     <div className="grid container mx-auto px-3  grid-cols-[repeat(auto-fit,minmax(300px,11fr))] justify-center gap-x-2 gap-y-4 mt-12 items-center">
     {
       Products?Products.map((item)=>{
-        if(item.category==="electronics"){
+        if(item.category==="jewelery"){
           return<div className="mx-auto p-2 sm:mx-0 max-w-xs md:max-w-sm  lg:max-w-md xl:max-w-lg bg-white border border-gray-200 rounded-lg h-[450px] shadow-lg overflow-hidden">  
           <Link  href={`/details/${item.id}`}>
            <img src={item.image} alt="Product Image" className="w-full h-48 object-contain"/>
