@@ -1,8 +1,7 @@
-
 import type { Metadata } from "next";
 import Navbar from "@/app/component/Navbar";
 import Footer from "./component/Footer";
-
+import {CartProvider} from "./context/CartContext"
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -21,6 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <CartProvider>
+          
         <Navbar />
         <main className="mt-16 md:mt-32 lg:mt-20">
           {children}
@@ -28,6 +29,7 @@ export default function RootLayout({
         <footer className="mt-20">
           <Footer />
         </footer>
+        </ CartProvider>
       </body>
     </html>
   );
