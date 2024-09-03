@@ -34,7 +34,7 @@ export default  function ElectronicProducts() {
           <Link href="/cart" className="px-4 py-2 bg-blue-500  text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           <BsCart4 className="inline-block"/>Add to Cart
           </Link>
-          <Link href={`/details/${item.id}`} className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
+          <Link href={`/details/${item.id}`} className="px-4 py-2 border-2 border-gray-500 hover:bg-gray-500 hover:text-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
             Details
           </Link>
         </div>
