@@ -24,7 +24,7 @@ export default function Footer() {
             href:"/careers"
         },
         {
-            name:"NepaliBazar stories",
+            name:"NepaliBazaar stories",
             href:"/bazarstories"
         },
         {
@@ -109,7 +109,7 @@ export default function Footer() {
                     })
                 }
             </div>
-            <div className='flex flex-col '>
+            <div className='flex flex-col md:ml-10'>
                 <h2 className='font-bold text-lg mt-5 mb-3'>SOCIAL</h2>
                 {
                     SocialLink.map((e)=>{

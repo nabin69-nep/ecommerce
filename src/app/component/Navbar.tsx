@@ -32,7 +32,7 @@ function Navbar() {
                 }
               </div>
               <div className="flex items-center">
-                <li className=" p-1 "><Link className=' text-2xl font-[900] lg:text-3xl' href="/">Nepali Bazar</Link></li>
+                <li className=" p-1 "><Link className=' text-2xl font-[900] lg:text-3xl' href="/">Nepali Bazaar</Link></li>
                 <div className="hidden md:flex items-center">
                   {
                     NavLink.map((link)=>{
