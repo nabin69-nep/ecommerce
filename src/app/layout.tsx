@@ -34,7 +34,7 @@ export default function RootLayout({
               <div className="md:hidden cursor-pointer">
                 {
                   menuOpen ?
-                   <IoClose className="text-4xl font-[900] left-5  duration-300 relative z-50" onClick={handleNav} />:  <IoIosMenu  className="text-4xl duration-300 font-[900] relative z-50" onClick={handleNav} />
+                   <IoClose className="text-4xl font-[900] duration-300 relative z-50" onClick={handleNav} />:  <IoIosMenu  className="text-4xl duration-300 font-[900] relative z-50" onClick={handleNav} />
                 }
               </div>
               <div className="flex items-center">
