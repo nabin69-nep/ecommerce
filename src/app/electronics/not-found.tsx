@@ -4,7 +4,6 @@ import { FaArrowDown } from "react-icons/fa";
 export default function NotFoundPage() {
   return (
     <div className='mt-20  flex justify-center items-center flex-col'> 
-      <img src="images/404.svg" alt="" className='w-52' />
       <h2 className='mt-10 text-4xl'>An Error Occurred.</h2>
       <p className='mt-7'><strong>Sorry, something went wrong.</strong></p>
       <p className='mt-5 opacity-70 text-sm'>The server encountered an error and could not complete your request. We will soon fix this issue. Please, try again later.</p>

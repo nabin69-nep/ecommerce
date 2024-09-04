@@ -37,9 +37,9 @@ function Navbar() {
                 <li className=" p-1 "><Link className=' text-2xl font-[900] lg:text-3xl' href="/">Nepali Bazaar</Link></li>
                 <div className="hidden md:flex items-center">
                   {
-                    NavLink.map((link)=>{
+                    NavLink.map((link,linkIndex)=>{
                       const isActive =pathName.startsWith(link.href) 
-                      return <li className={isActive?"ml-10  p-1 text-red-500":"ml-10  p-1 "}><Link href={link.href}>{link.name}</Link></li>
+                      return <li key={linkIndex} className={isActive?"ml-10  p-1 text-red-500":"ml-10  p-1 "}><Link href={link.href}>{link.name}</Link></li>
                     })
                   }
                 </div>
@@ -50,9 +50,9 @@ function Navbar() {
               }>
                   <div className="md:hidden mt-24">
                   {
-                    NavLink.map((link)=>{
+                    NavLink.map((link,linkIndex)=>{
                       const isActive =pathName.startsWith(link.href) 
-                      return <li className=" ml-10  p-1"><Link onClick={handleNav} className={isActive?"font-bold  text-lg text-red-500":"font-bold  text-lg"}  href={link.href}>{link.name}</Link></li>
+                      return <li key={linkIndex} className=" ml-10  p-1"><Link onClick={handleNav} className={isActive?"font-bold  text-lg text-red-500":"font-bold  text-lg"}  href={link.href}>{link.name}</Link></li>
                     })
                   }
                 </div>

@@ -4,7 +4,6 @@ import { useContext } from "react";
 import CartContext from "@/app/context/CartContext"
 import { notFound } from 'next/navigation';
 import Product from '@/app/ProductInterFace';
-
 interface Params {
   params: {
     id: number;
@@ -15,12 +14,11 @@ export default async function DetailsPage({ params: { id } }: Params) {
   const {addItemToCart}=useContext(CartContext);
     const res = await fetch(`https://fakestoreapi.com/products/${id}`);
     const data:Product = await res.json();
-
   if (id > 20) {
     notFound();
   }
-
   const addToCartHandler=()=>{
+    alert("Item added to cart !")
     addItemToCart({
       id:data.id,
       title:data.title,
@@ -47,7 +45,7 @@ export default async function DetailsPage({ params: { id } }: Params) {
             <p className="text-xl font-semibold text-orange-300 mb-4">Rating: <span className='text-blue-400'>{data.rating.rate}</span>/<small>5</small> </p>
             <p className="md:text-lg text-sm text-gray-700 mb-6">{data.description}</p>
             <button 
-            onClick={addToCartHandler}
+            onClick={addToCartHandler} 
               className="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Add to Cart

@@ -31,7 +31,7 @@ const item ={...cartItem,quantity:newQty}
 if(newQty<1) return;
 addItemToCart(item)
 }
-const amountWithoutTax=cart?.cartItems?.reduce((acc,item)=>acc + Number(item.quantity) * Number(item.price),0).toFixed(2) 
+const amountWithoutTax=cart?.cartItems?.reduce((acc: number,item: { quantity: number; price: number; })=>acc + item.quantity * item.price,0).toFixed(2) 
 // acc + item.quantity*item.price red color underline due the typeScript
 const amountWithTax=()=>{
   const tax=0.13*amountWithoutTax
@@ -54,7 +54,7 @@ const amountWithTax=()=>{
             <main className="md:w-3/4">
               <article className="border border-gray-200 bg-white shadow-sm rounded mb-5 p-3 lg:p-5">
               {cart?.cartItems?.map((cartItem:CartItem)=>{
-                return <div>
+                return <div key={cartItem.id} >
                 <div className="flex flex-wrap lg:flex-row gap-5  mb-4">
                   <div className="w-full lg:w-2/5 xl:w-2/4">
                     <figure className="flex leading-5">

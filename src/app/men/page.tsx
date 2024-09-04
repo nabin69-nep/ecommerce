@@ -30,9 +30,9 @@ export default  function MenProducts() {
   return (
     <div className="grid container mx-auto px-3  grid-cols-[repeat(auto-fit,minmax(300px,11fr))] justify-center gap-x-2 gap-y-4 mt-12 items-center">
     {
-      Products?Products.map((item)=>{
+      Products?Products.map((item,itemIndex)=>{
         if(item.category==="men's clothing"){
-          return<div className="mx-auto p-2 sm:mx-0 max-w-xs md:max-w-sm  lg:max-w-md xl:max-w-lg bg-white border border-gray-200 rounded-lg h-[450px] shadow-lg overflow-hidden">  
+          return<div   key={itemIndex} className="mx-auto p-2 sm:mx-0 max-w-xs md:max-w-sm  lg:max-w-md xl:max-w-lg bg-white border border-gray-200 rounded-lg h-[450px] shadow-lg overflow-hidden">  
           <Link  href={`/details/${item.id}`}>
            <img src={item.image} alt="Product Image" className="w-full h-48 object-contain"/>
            <div className="p-4">

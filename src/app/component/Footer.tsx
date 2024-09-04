@@ -86,16 +86,16 @@ export default function Footer() {
             <div className='flex flex-col '>
                 <h2 className='font-bold text-lg mt-5 mb-3'>ABOUT</h2>
                 {
-                    AboutLink.map((e)=>{
-                        return <Link href={e.href} className='text-white text-xs font-bold mt-2 '>{e.name}</Link>
+                    AboutLink.map((e,eindex)=>{
+                        return <Link key={eindex} href={e.href} className='text-white text-xs font-bold mt-2 '>{e.name}</Link>
                     })
                 }
             </div>
             <div className='flex flex-col md:ml-5 '>
                 <h2 className='font-bold text-lg mt-5 mb-3'>GROUP COMPANIES</h2>
                 {
-                    GroupLink.map((e)=>{
-                        return <Link href={e.href} className='text-white text-xs font-bold mt-2 '>{e.name}</Link>
+                    GroupLink.map((e,eindex)=>{
+                        return <Link key={eindex} href={e.href} className='text-white text-xs font-bold mt-2 '>{e.name}</Link>
                     })
                 }
             </div>
@@ -104,16 +104,16 @@ export default function Footer() {
             <div className='flex flex-col '>
                 <h2 className='font-bold text-lg mt-5 mb-3'>CUSTOMER SERVICE</h2>
                 {
-                    HelpLink.map((e)=>{
-                        return <Link href={e.href} className='text-white text-xs font-bold mt-2 '>{e.name}</Link>
+                    HelpLink.map((e,eindex)=>{
+                        return <Link key={eindex} href={e.href} className='text-white text-xs font-bold mt-2 '>{e.name}</Link>
                     })
                 }
             </div>
             <div className='flex flex-col md:ml-10'>
                 <h2 className='font-bold text-lg mt-5 mb-3'>SOCIAL</h2>
                 {
-                    SocialLink.map((e)=>{
-                        return  <Link href={e.href} className='text-white text-2xl font-bold mt-2 '>{e.name}</Link>
+                    SocialLink.map((e,eindex)=>{
+                        return  <Link key={eindex} href={e.href} className='text-white text-2xl font-bold mt-2 '>{e.name}</Link>
                     })
                 }
             </div>
@@ -123,7 +123,7 @@ export default function Footer() {
             <Link href="/seller"><MdOutlineStorefront className='inline-block text-yellow-400' /><span className='ml-2 text-xs font-bold'>Become a Seller</span></Link>
             <Link href="/gift"><TiGift className='inline-block text-yellow-400' /><span className='ml-2 text-xs font-bold'>Gifts Cards</span></Link>
             <Link href="/help"><MdOutlineHelpCenter className='inline-block text-yellow-400' /><span className='ml-2 text-xs font-bold'>Help Center</span></Link>
-            <p className='text-xs font-bold'>&copy;2020-2024Nepalibazar.com</p>
+            <p className='text-xs font-bold'>&copy;2020-2024Nepalibazaar.com</p>
         </div>
     </div>
     </div>
