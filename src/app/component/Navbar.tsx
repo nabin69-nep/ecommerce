@@ -44,7 +44,7 @@ function Navbar() {
                   }
                 </div>
               </div>
-              <li className=" p-1 "><Link className=' flex items-center text-blue-400' href="/cart"><BsCart4 className='font-bold text-3xl'/>({cart?.cartItems?.length>0?cart?.cartItems?.length:"0"})</Link></li>
+              <li className=" p-1 "><Link className=' flex items-center text-blue-400' href="/cart"><BsCart4 className='font-bold text-3xl'/><span className='text-red-400'>({cart?.cartItems?.length>0?cart?.cartItems?.length:"0"})</span></Link></li>
               <div className={
                 menuOpen?"fixed top-0 w-screen duration-300 left-0 ease-in-out h-screen bg-gray-300 z-[999]":"left-[-100%] bg-gray-300 duration-300 ease-in-out  fixed top-0"
               }>
